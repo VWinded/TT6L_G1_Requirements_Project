@@ -9,5 +9,10 @@ Tham Yong Shian,
 Ahmad Farhan Zikri Bin Ahmad Fara,
 Mohamad Ammarul Azim Bin Mohamad Yusof.
 
-Following are the Documents and Members roles
+Following are the Documents
 1. TT6L_G1_TeamFormation.docx (A brief and quick introduction to the team members, written by Tham Yong Shian)
+2. TT6L_G1_ProjectVision.docx (Thoroughly explains what the project aims to achieve)
+3. TT6L_G1_ContextObject.docx (Identify stakeholders and requirements)
+4. TT6L_G1_ElicitationPlan.docx (A plan to elicit requirements from relevant stakeholders)
+5. TT6L_G1_ElicitationExecution.docx (The results of elicitation plan)
+6. TT6L_G1_SRS.docx (The SRS document)
