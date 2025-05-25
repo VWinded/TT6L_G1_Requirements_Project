@@ -10,7 +10,7 @@ Ahmad Farhan Zikri Bin Ahmad Fara,
 Mohamad Ammarul Azim Bin Mohamad Yusof.
 
 Following are the Documents
-1. TT6L_G1_TeamFormation.docx (A brief and quick introduction to the team members, written by Tham Yong Shian)
+1. TT6L_G1_TeamFormation.docx (A brief and quick introduction to the team members)
 2. TT6L_G1_ProjectVision.docx (Thoroughly explains what the project aims to achieve)
 3. TT6L_G1_ContextObject.docx (Identify stakeholders and requirements)
 4. TT6L_G1_ElicitationPlan.docx (A plan to elicit requirements from relevant stakeholders)
