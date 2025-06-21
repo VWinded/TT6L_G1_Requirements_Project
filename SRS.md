@@ -3656,14 +3656,271 @@ The security requirements for the Wellness Portal are as follows:
 For exporting system log files, data can be exported in either JSON or
 CSV format.
 
-### 3.8.2 Problems to Be Solved by the Software {#problems-to-be-solved-by-the-software .unnumbered}
+### 3.8.2 Problems to Be Solved by the Software
 
 - Organize the university's many health-related facilities into a
   universal software (Wellness Portal).
 
-[]{#_Toc1770675368 .anchor}
+### 3.8.3 Validation Session  {#validation-session .unnumbered}
 
-# 4.0 Verification {#verification .unnumbered}
+| **Session ID**  | **Date and Time**             | **Technique**  | **Section Reviewed**                   | **Participant**  | **No. of Defect**  |
+|-----------------|-------------------------------|----------------|----------------------------------------|------------------|--------------------|
+| VS_01           | 18^th^ June 2025; 4pm - 7pm   | Inspection     | 1.3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.8      | Tham Yong Shian  | 5                  |
+| VS_02           | 19^th^ June 2025; 5pm-7pm     | Inspection     | 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 5.1, 5.2 | Tham Yong Shian  | 6                  |
+| VS_03           | 20^th^ June 2025; 6pm -- 10pm | Inspection     | 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8 | Tham Yong Shian  | 3                  |
+
+### 3.8.4 Defect Summary
+
+A. Content Defect 
+
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 17%" />
+<col style="width: 26%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Req ID</strong> </th>
+<th><strong>Validation and Defect Description</strong> </th>
+<th><strong>Detected By</strong> </th>
+<th><strong>Comment/Suggested Fix</strong> </th>
+<th><strong>Session ID</strong> </th>
+<th><strong>Severity (1–5)</strong> </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CD_01</td>
+<td>Missing / insufficient software system attributes </td>
+<td>Tham Yong Shian </td>
+<td>Define and add software system attributes. </td>
+<td><p>VS_01 </p>
+<p> </p></td>
+<td>5 </td>
+</tr>
+<tr class="even">
+<td>CD_02</td>
+<td>Cells not merged although same entity</td>
+<td>Tham Yong Shian</td>
+<td>Merge cells that have the same entity together to improve
+clarity.</td>
+<td>VS_02</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>CD_03</td>
+<td>Inconsistent plural / singular form terms</td>
+<td>Tham Yong Shian</td>
+<td>Ensure every word used follows the correct noun form. (e.g. removes
+or remove)</td>
+<td>VS_02</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>CD_04</td>
+<td>Missing document</td>
+<td>Tham Yong Shian</td>
+<td>Task 4/Kano Model.docx is mentioned but isn’t shown in the SRS
+document itself.</td>
+<td>VS_02</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>CD_05</td>
+<td>Incorrect Use Case Actor (UC_009)</td>
+<td>Tham Yong Shian</td>
+<td>UC_009 is done by the system and not the students.</td>
+<td>VS_03</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>CD_06</td>
+<td>Incorrect Use Case Actor (UC_010)</td>
+<td>Tham Yong Shian</td>
+<td>UC_010 is done by the system and not the students.</td>
+<td>VS_03</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+
+B. Documentation Defect
+
+| **Req ID**  | **Validation and Defect Description**      | **Detected By**  | **Comment/Suggested Fix**                                          | **Session ID**  | **Severity (1--5)**  |
+|-------------|--------------------------------------------|------------------|--------------------------------------------------------------------|-----------------|----------------------|
+| DD_01       | Inconsistent font choice                   | Tham Yong Shian  | Fix all font to be Aptos.                                          | VS_01           | 1                    |
+| DD_02       | Blank page                                 | Tham Yong Shian  | Remove blank page. (page 17)                                       | VS_01           | 1                    |
+| DD_03       | Author section not in tables               | Tham Yong Shian  | Either add/remove respective authors from table.                   | VS_01           | 2                    |
+| DD_04       | Inconsistent terminology used for students | Tham Yong Shian  | Students, end-users, and users are used to refer to student actor. | VS_02           | 3                    |
+| DD_05       | Duplicate acronym                          | Tham Yong Shian  | JWT is mentioned twice.                                            | VS_02           | 1                    |
+
+C. Agreement Defect
+
+| **Req ID**  | **Validation and Defect Description**                         | **Detected By**  | **Comment/Suggested Fix**                                                                                             | **Session ID**  | **Severity (1--5)**  |
+|-------------|---------------------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------|----------------------|
+| AD_01       | Password hashing algorithm unexplained                        | Tham Yong Shian  | Explain what algorithm is used to hash passwords.                                                                     |  VS_01          |  4                   |
+| AD_02       | Data recovery and/or backup is mentioned but not implemented. | Tham Yong Shian  | Incorporate Recovery Point Objective RPO or Recovery Time Objective RTO principle in case of data breach and/or leak. | VS_02           | 5                    |
+| AD_03       | HIPAA compliance is mentioned but not implemented.            | Tham Yong Shian  | Explain how the student's health privacy is protected.                                                                | VS_03           | 5                    |
+
+
+### 3.8.5 Conflict Analysis
+
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 21%" />
+<col style="width: 27%" />
+<col style="width: 19%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Conflict ID</strong></th>
+<th><strong>Conflict Description</strong></th>
+<th><strong>Conflict Analysis</strong></th>
+<th><strong>Stakeholders Involved</strong></th>
+<th><strong>Session ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CF_01</td>
+<td>Dispute in actors (UC_009)</td>
+<td>Data conflict – UC_009 states that the student is the actor,
+however, the description is the responsibility of the University Health
+Portal. This misrepresents the party who initiates the action which may
+lead to mismatched interface designs.</td>
+<td>Developer, student</td>
+<td>VS_03</td>
+</tr>
+<tr class="even">
+<td>CF_02</td>
+<td>Dispute in actors (UC_010)</td>
+<td>Data conflict – UC_010 states that the student is the actor,
+however, the description is the responsibility of the University
+Recreation Portal. This misrepresents the party who initiates the action
+which may lead to mismatched interface designs.</td>
+<td>Developer, student</td>
+<td>VS_03</td>
+</tr>
+<tr class="odd">
+<td>CF_03</td>
+<td>Admin vs Security concerns</td>
+<td><p>Interest conflict – Admin can create, modify, and delete user accounts and assign or revoke role, without
+any justification, as well as access logs without conforming to the
+HIPAA.</p></td>
+<td>System Admin, Security Team</td>
+<td>VS_03</td>
+</tr>
+</tbody>
+</table>
+
+### 3.8.6 Conflict Analysis and Resolution
+
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 29%" />
+<col style="width: 13%" />
+<col style="width: 22%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Conflict ID</strong></th>
+<th><strong>Conflict Resolution Strategy</strong></th>
+<th><strong>Resolved (y/n)</strong></th>
+<th><strong>Outcome (if resolved)</strong></th>
+<th><strong>Justification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CF_01</td>
+<td>Identify and communicate with the developers and system admins on a
+collective consensus on the actor role of student and University Health
+Portal.</td>
+<td>y</td>
+<td><p>Identification reached on the action to be initiated by the
+student. The University Health Portal then receives and updates student health appointment, bookings and cancellations only after the initiation<</td>
+<td>Ensures correct system design and avoids misassigned
+responsibilities.</td>
+</tr>
+<tr class="even">
+<td>CF_02</td>
+<td>Identify and communicate with the developers and system admins on a
+collective consensus on the actor role of student and University
+Recreation Portal.</td>
+<td>y</td>
+<td><p>Identification reached on the action to be initiated by the
+student. The University Recreation Portal then updates the fitness
+class schedule and availability based on bookings or cancellations only after the initiation</p></td>
+<td>Ensures correct system design and avoids misassigned
+responsibilities.</td>
+</tr>
+<tr class="odd">
+<td>CF_03</td>
+<td>Hold a meeting and discussion with system admin as well as
+University IT team with an additional scrum master to understand the
+functions and limitations of a system admin, adhering to the HIPAA.</td>
+<td>y</td>
+<td>More secure role control and accountability added if any privacy
+issues are detected.</td>
+<td>Conformity with security laws and data privacy laws, while also
+preventing insider threats and breaches.</td>
+</tr>
+</tbody>
+</table>
+
+### 3.8.7 Change Log
+
+### 3.8.8 Requirements Traceability Matrix
+
+### 3.8.9 Role in Requirements Validation, Negotiation and Management
+
+### 3.8.10 Version Control and Configuration Summary
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Repository Branch</th>
+<th>project-part-2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Key Files</td>
+<td><p>SRS.md</p>
+<p>TT6L_G1_SRS.docx</p>
+<p>Changelog.md</p></td>
+</tr>
+<tr class="even">
+<td>Commits</td>
+<td>Tham Yong Shian</td>
+</tr>
+<tr class="odd">
+<td>Pull</td>
+<td>Tham Yong Shian</td>
+</tr>
+<tr class="even">
+<td>Changelog</td>
+<td>Tham Yong Shian</td>
+</tr>
+</tbody>
+</table>
+
+###
+
+
+# 4.0 Verification
 
 This section describes the approach and criteria that will be used to
 verify that the Campus Wellness Portal system meets its functional and
@@ -3671,7 +3928,7 @@ non-functional requirements. This is done to ensure that the
 stakeholder's expectations are met, and that the system performs in
 accordance to the specification.
 
-## 4.1 Verification Approach {#verification-approach .unnumbered}
+## 4.1 Verification Approach
 
 Verification of the Campus Wellness Portal will be conducted using
 various software testing techniques throughout the development cycle.
@@ -3688,7 +3945,7 @@ timeline and location for the techniques.
 
 ## 4.2 Verification Criteria {#verification-criteria .unnumbered}
 
-### 4.2.1 Unit testing verification criteria {#unit-testing-verification-criteria .unnumbered}
+### 4.2.1 Unit testing verification criteria
 
 | **Module**                         | **Test Case**                                                                    | **Expected Output**                                                                        |
 |------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -3705,14 +3962,14 @@ timeline and location for the techniques.
 | Manage User Access Control         | Create, modify, and delete user accounts and assign or revoke roles/permissions. | Return the users access dashboard to the user.                                             |
 | View System Logs                   | View system logs                                                                 | Return the system logs.                                                                    |
 
-### 4.2.2 Integration testing verification criteria {#integration-testing-verification-criteria .unnumbered}
+### 4.2.2 Integration testing verification criteria
 
 | **Integrated Modules**                                                                                   | **Test Case**                                                                                                               | **Expected Outcome**                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Book Fitness Class + Cancel Fitness Class + Manage Fitness Class Bookings                                | Users view the fitness class bookings and can book new fitness class sessions and cancel previously booked classes.         | Fitness class dashboard displays correctly and success message pops up for successful booking and cancellation of fitness class.                         |
 | Schedule Health Centre Appointment + Cancel Health Centre Appointment + Manage Health Centre Appointment | User views their scheduled health centre appointments and can schedule a new appointment or cancel a scheduled appointment. | Health centre appointment dashboard displays correctly and success message pops up for successful booking and cancellation of health centre appointment. |
 
-### 4.2.3 Functional testing verification criteria {#functional-testing-verification-criteria .unnumbered}
+### 4.2.3 Functional testing verification criteria
 
 | **Function Code** | **Feature**                        | **Test Case**                                                            | **Expected Outcome**                              |
 |-------------------|------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------|
@@ -3729,20 +3986,20 @@ timeline and location for the techniques.
 | F011              | Manage User Access Control         | Manage users access to the system.                                       | Redirect to user access dashboard.                |
 | F012              | View System Logs                   | View past system logs.                                                   | Shows the past system logs.                       |
 
-### 4.2.4 User acceptance testing (UAT) verification criteria {#user-acceptance-testing-uat-verification-criteria .unnumbered}
+### 4.2.4 User acceptance testing (UAT) verification criteria
 
 | User Role | UAT Scenario                                                                                                                                                                                              | Acceptance Criteria                                           |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | Student   | Login, book fitness class, cancel fitness class, manage fitness class bookings, manage health centre appointments, schedule health centre appointment, cancel health centre appointment, view health tips | All actions complete without errors and are easy to navigate. |
 | Admin     | Manage user access control, view system logs                                                                                                                                                              | User access can be changed and system logs can be viewed.     |
 
-### 4.2.5 Performance Verification Criteria {#performance-verification-criteria .unnumbered}
+### 4.2.5 Performance Verification Criteria
 
 | Requirement ID | Description                                                                          | Verification Criteria                                                  | Priority |
 |----------------|--------------------------------------------------------------------------------------|------------------------------------------------------------------------|----------|
 | REQ_P001       | The average response time of Wellness Portal functions shall be less than 2 seconds. | Wellness Portal functions must load and complete within \<= 2 seconds. | High     |
 
-### 4.2.6 Usability Verification Criteria {#usability-verification-criteria .unnumbered}
+### 4.2.6 Usability Verification Criteria
 
 | Requirement ID | Description                                                                                              | Verification Criteria                                                                                                                        | Priority |
 |----------------|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -3752,11 +4009,11 @@ timeline and location for the techniques.
 
 []{#_Toc1816687531 .anchor}
 
-# 5.0 Appendices {#appendices .unnumbered}
+# 5.0 Appendices
 
-## 5.1 Assumptions and Dependencies {#assumptions-and-dependencies .unnumbered}
+## 5.1 Assumptions and Dependencies
 
-### 5.1.1 University Authentication System {#university-authentication-system .unnumbered}
+### 5.1.1 University Authentication System
 
 Type: OAuth 2.0 Single Sign-on (SSO)
 
@@ -3774,7 +4031,7 @@ Dependency: The Wellness Portal depends on this system to differentiate
 between normal users and system administrators. It works in conjunction
 with OAuth 2.0 for handling user authentication.
 
-### 5.1.2 Fitness Class Booking {#fitness-class-booking .unnumbered}
+### 5.1.2 Fitness Class Booking
 
 Type: REST API integration
 
@@ -3783,7 +4040,7 @@ Role: Book fitness classes and cancel booked fitness classes.
 Dependency: The Wellness Portal depends on this system to handle fitness
 class availability.
 
-### 5.1.3 Health Centre Appointment Booking {#health-centre-appointment-booking .unnumbered}
+### 5.1.3 Health Centre Appointment Booking
 
 Type: REST API integration
 
@@ -3793,7 +4050,7 @@ appointments.
 Dependency: The Wellness Portal depends on this system to handle health
 centre appointment availability.
 
-### 5.1.4 Browser Standards {#browser-standards .unnumbered}
+### 5.1.4 Browser Standards
 
 Type: Client-side software
 
@@ -3802,7 +4059,7 @@ Role: Interface in which users will access the Wellness Portal
 Dependency: The Wellness Portal will assume compliance with ECMAScript
 and HTML5 standards. Use of unsupported browsers may cause UI/UX issues.
 
-### 5.1.5 Stakeholder Availability {#stakeholder-availability .unnumbered}
+### 5.1.5 Stakeholder Availability
 
 Type: Organizational
 
@@ -3811,7 +4068,7 @@ Role: Provide input, feedback and UAT participation
 Dependency: Lack of participation from students and staff may put
 requirements validation and UAT at risk.
 
-## 5.2 Acronyms and Abbreviations {#acronyms-and-abbreviations .unnumbered}
+## 5.2 Acronyms and Abbreviations
 
 | **Acronym/Abbreviation** | **Meaning**                                         |
 |--------------------------|-----------------------------------------------------|
